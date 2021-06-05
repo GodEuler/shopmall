@@ -1,9 +1,9 @@
 package com.haiyang.springmybatis.common.config.validator;
 
+import com.haiyang.springmybatis.common.utils.SmartValidator;
 import org.hibernate.validator.HibernateValidator;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.validation.SmartValidator;
 
 import javax.validation.Validation;
 import javax.validation.Validator;
