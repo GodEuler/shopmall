@@ -9,7 +9,8 @@ import org.apache.logging.log4j.util.Strings;
  * message:对应接口中message
  */
 public enum CodeMessage {
-    PARAM_FAIL(UniversalConst.CLIENT_PARAM_FAIL_CODE, UniversalConst.CLIENT_PARAM_FAIL_MESSAGE);
+    PARAM_FAIL(UniversalConst.CLIENT_PARAM_FAIL_CODE, UniversalConst.CLIENT_PARAM_FAIL_MESSAGE),
+    REPEAT_SUBMIT("E501","不能重复提交");
     private String code;
     private String message;
 

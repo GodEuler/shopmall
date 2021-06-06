@@ -3,6 +3,7 @@ package com.haiyang.springmybatis.controller;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.haiyang.springmybatis.common.config.repeat.request.RepeatSubmit;
 import com.haiyang.springmybatis.common.config.validator.group.InsertValidate;
 import com.haiyang.springmybatis.common.config.validator.group.UpdateValidate;
 import com.haiyang.springmybatis.common.response.BaseResponse;
@@ -72,6 +73,7 @@ public class UserController {
      * 保存
      */
     @PostMapping("/save")
+    @RepeatSubmit(value = true)
     public BaseResponse save(@Validated(InsertValidate.class) @RequestBody UserEntity user){
         boolean save = userService.save(user);
         return SmartResponse.result(save);
